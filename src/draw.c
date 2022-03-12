@@ -6,7 +6,7 @@
 /*   By: chahan <hgdst14@naver.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 18:01:49 by chahan            #+#    #+#             */
-/*   Updated: 2022/03/12 18:01:52 by chahan           ###   ########.fr       */
+/*   Updated: 2022/03/12 20:53:04 by chahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@ void	my_pixel_put(t_img *data, int x, int y, int color)
 
 	dst = data->addr + (y * data->line_l + x * (data->bpp / 8));
 	*(unsigned int *)dst = color;
-}
-
-int	my_pixel_get(t_img *data, int x, int y)
-{
-	return (*(unsigned int *)(data->addr
-		+ (y * data->line_l + x * (data->bpp / 8))));
 }
 
 void	set_color(t_fractol *fractol, int *i)
@@ -51,13 +45,13 @@ static void	set_text(t_fractol *fractol)
 {
 	if (fractol->julia.selected)
 		mlx_string_put(fractol->mlx, fractol->window, 10, 25,
-			321321, "Julia");
+			15770880, "Julia");
 	else if (fractol->mdlbr.selected)
 		mlx_string_put(fractol->mlx, fractol->window, 10, 25,
-			321321, "Mandelbrot");
+			15770880, "Mandelbrot");
 	else if (fractol->sierpinski.selected)
 		mlx_string_put(fractol->mlx, fractol->window, 10, 25,
-			321321, "Sierpinski");
+			15770880, "Sierpinski");
 }
 
 int	fractals(t_fractol *fractol)

@@ -6,7 +6,7 @@
 /*   By: chahan <hgdst14@naver.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 17:28:14 by chahan            #+#    #+#             */
-/*   Updated: 2022/03/12 20:04:41 by chahan           ###   ########.fr       */
+/*   Updated: 2022/03/12 20:47:56 by chahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -197,7 +197,6 @@ int		fractals(t_fractol *fractol);
 int		sierpinski(t_fractol *fractol);
 int		keys(int keycode, t_fractol *fractol);
 int		create_trgb(int t, int r, int g, int b);
-int		my_pixel_get(t_img *data, int x, int y);
 int		ft_strcmp(const char *s1, const char *s2);
 int		keys_release(int keycode, t_fractol *fractol);
 int		mouse_hook(int keycode, int x, int y, t_fractol *fractol);
