@@ -6,7 +6,7 @@
 /*   By: chahan <hgdst14@naver.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 18:02:49 by chahan            #+#    #+#             */
-/*   Updated: 2022/03/12 18:02:51 by chahan           ###   ########.fr       */
+/*   Updated: 2022/03/20 14:09:30 by chahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ static void	maindelbrot(t_fractol *fractol, int *x, int *y, int *i)
 		/ (0.5 * fractol->zoom * fractol->screen.y)
 		+ fractol->moveY;
 	fractol->mdlbr.oldIm = 0;
-	fractol->mdlbr.oldRe = fractol->mdlbr.oldIm;
-	fractol->mdlbr.newIm = fractol->mdlbr.oldRe;
-	fractol->mdlbr.newRe = fractol->mdlbr.newIm;
+	fractol->mdlbr.oldRe = 0;
+	fractol->mdlbr.newIm = 0;
+	fractol->mdlbr.newRe = 0;
 	*i = 0;
 	while (*i < fractol->maxIterations)
 	{

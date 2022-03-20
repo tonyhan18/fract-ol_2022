@@ -6,7 +6,7 @@
 /*   By: chahan <hgdst14@naver.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 18:02:27 by chahan            #+#    #+#             */
-/*   Updated: 2022/03/12 20:16:22 by chahan           ###   ########.fr       */
+/*   Updated: 2022/03/20 14:54:07 by chahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static void	setup(t_fractol *fractol, char **argv)
 			&fractol->main_img.endian);
 	initialize_fractals(fractol);
 	mlx_hook(fractol->window, KEY_PRESS, 1L << 0, keys, fractol);
-	mlx_hook(fractol->window, KEY_RELEASE, 1L << 0, keys_release, fractol);
+	mlx_hook(fractol->window, KEY_RELEASE, 1L << 1, keys_release, fractol);
 	mlx_hook(fractol->window, DESTROY_NOTIFY, 0L, finish, fractol);
 	mlx_mouse_hook(fractol->window, mouse_hook, fractol);
 	mlx_loop_hook(fractol->mlx, fractals, fractol);
